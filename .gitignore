@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Local tooling and temporary files
+.firecrawl/
+tmp/
+*.log
+
+# Environment and deployment configuration
+.env*
+!.env.example
+.vercel/
+
+# Operating system files
+.DS_Store
+Thumbs.db
