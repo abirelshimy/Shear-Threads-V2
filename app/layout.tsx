@@ -21,14 +21,12 @@ export const metadata: Metadata = {
     siteName: "Shear Threads",
     url: "./",
     type: "website",
-    images: ["/logo-st-purple-s-black-t-v3.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shear Threads | Custom Greek Embroidery & Woven Lanyards",
     description:
       "Custom embroidery and woven lanyards for fraternities, sororities, and co-ed orgs. Shipping nationwide.",
-    images: ["/logo-st-purple-s-black-t-v3.png"],
   },
 };
 
