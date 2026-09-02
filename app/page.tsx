@@ -1,6 +1,6 @@
-import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import HeroSwitcher from "@/components/HeroSwitcher";
 import ProductCard from "@/components/ProductCard";
 import { INSTAGRAM_URL, products, type Product } from "@/lib/products";
 
@@ -58,87 +58,11 @@ const TESTIMONIALS = [
   },
 ];
 
-function rise(ms: number): CSSProperties {
-  return { "--rise-delay": `${ms}ms` } as CSSProperties;
-}
-
 export default function Home() {
   return (
     <>
-      {/* ======================= TYPE-LED HERO ======================= */}
-      <section className="px-5 pt-6 md:px-8 lg:px-12">
-        <div className="hero-stage mx-auto max-w-[1240px] overflow-hidden border-b border-seam">
-          <p className="hero-eyebrow eyebrow anim-rise absolute top-5 left-0 z-20" style={rise(0)}>
-            Custom apparel printing and embroidery
-          </p>
-
-          <h1
-            className="hero-title font-display"
-            aria-label="Where Memories Meet Thread"
-          >
-            <span className="hero-word" style={rise(90)}>Where</span>
-            <span className="hero-word" style={rise(180)}>Memories</span>
-            <span className="hero-word hero-title-accent" style={rise(270)}>Meet</span>
-            <span className="hero-word" style={rise(360)}>Thread</span>
-          </h1>
-
-          <div className="hero-gallery anim-rise" style={rise(160)}>
-            <div className="hero-gallery-main">
-              <Image
-                src="/hero/shear-threads-model-rest-born-purple.png"
-                alt="College student wearing a cream sweatshirt with dark-purple lettering reading The Rest Were Just Born"
-                fill
-                preload
-                sizes="(min-width: 1024px) 36rem, 66vw"
-                className="object-cover object-center"
-              />
-            </div>
-
-            <div className="hero-gallery-side">
-              <div>
-                <Image
-                  src="/hero/instagram-stitching.jpg"
-                  alt="Embroidery machine stitching a custom garment"
-                  fill
-                  sizes="(min-width: 1024px) 14rem, 30vw"
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <Image
-                  src="/hero/instagram-apparel.jpg"
-                  alt="Custom embroidered sweatshirt detail"
-                  fill
-                  sizes="(min-width: 1024px) 14rem, 30vw"
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <Image
-                  src="/hero/instagram-chapter-order.jpg"
-                  alt="Finished custom chapter apparel"
-                  fill
-                  sizes="(min-width: 1024px) 14rem, 30vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="hero-copy anim-rise" style={rise(230)}>
-            <p className="max-w-[20rem] text-sm leading-relaxed md:text-base">
-              Woven lanyards, embroidered apparel, and chapter drops designed
-              around the memories
-              <br className="hidden md:block" />
-              your organization keeps.
-            </p>
-            <Link href="/shop" className="btn-ink mt-7">
-              Shop the collection
-            </Link>
-          </div>
-
-        </div>
-      </section>
+      {/* ======================= HERO (Classic / Kinetic, selector) ======================= */}
+      <HeroSwitcher />
 
       {/* ========================= VALUE STRIP ========================= */}
       <section className="bg-warm border-y border-seam px-5 md:px-8 lg:px-12" aria-label="Why Shear Threads">

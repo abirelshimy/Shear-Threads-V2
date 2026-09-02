@@ -4,8 +4,10 @@ node_modules/
 # Next.js build output
 .next/
 out/
+tsconfig.tsbuildinfo
 
 # Local tooling and temporary files
+.claude/
 .firecrawl/
 tmp/
 *.log

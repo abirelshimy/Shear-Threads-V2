@@ -1,9 +1,12 @@
 import { Suspense } from "react";
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import ShopGrid from "@/components/ShopGrid";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = { title: "Shop" };
+
+const ROTATING_WORDS = ["your chapter.", "your family.", "your team."];
 
 const TAB_SKELETONS = ["w-16", "w-28", "w-24", "w-24", "w-20"];
 const CARD_SKELETONS = [0, 1, 2, 3, 4, 5];
@@ -52,8 +55,22 @@ export default function ShopPage() {
       {/* ---- Ivory page header ---- */}
       <section className="max-w-6xl mx-auto px-6 pt-16 md:pt-24">
         <p className="eyebrow anim-rise">The shop</p>
-        <h1 className="font-display mt-5 max-w-3xl text-5xl md:text-7xl anim-rise [--rise-delay:0.08s]">
-          Every stitch in stock
+        <h1 className="title-rotate font-display mt-5 max-w-3xl text-5xl md:text-7xl anim-rise [--rise-delay:0.08s]">
+          <span>Stitched for</span>
+          <span className="rotate-slot" aria-hidden="true">
+            {ROTATING_WORDS.map((word, index) => (
+              <span
+                key={word}
+                className="rotate-word"
+                style={{ "--hi-delay": `${index * 3}s` } as CSSProperties}
+              >
+                {word}
+              </span>
+            ))}
+          </span>
+          <span className="sr-only">
+            Stitched for your chapter, your family, your team.
+          </span>
         </h1>
         <p className="mt-6 max-w-xl text-muted anim-rise [--rise-delay:0.16s]">
           Woven lanyards, $18–22. Stitched in small batches, shipped nationwide,
