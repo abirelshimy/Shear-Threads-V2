@@ -27,8 +27,8 @@ export default function HeroClassic() {
         <div className="hero-gallery anim-rise" style={rise(160)}>
           <div className="hero-gallery-main">
             <Image
-              src="/hero/new-model.png"
-              alt="Model wearing a custom embroidered Shear Threads sweatshirt"
+              src="/hero/hero-model-braids-african-american-v3.png"
+              alt="African American model wearing a custom printed Shear Threads sweatshirt"
               fill
               preload
               sizes="(min-width: 1024px) 36rem, 66vw"
@@ -39,8 +39,8 @@ export default function HeroClassic() {
           <div className="hero-gallery-side">
             <div>
               <Image
-                src="/hero/instagram-stitching.jpg"
-                alt="Embroidery machine stitching a custom garment"
+                src="/hero/hero-machine-purple-stitch-v2.png"
+                alt="Embroidery machine stitching purple thread into grey fabric"
                 fill
                 sizes="(min-width: 1024px) 14rem, 30vw"
                 className="object-cover"

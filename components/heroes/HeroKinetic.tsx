@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const STRIP_IMAGES = [
-  { src: "/hero/new-model.png", alt: "Model wearing a custom embroidered Shear Threads sweatshirt" },
-  { src: "/hero/instagram-stitching.jpg", alt: "Embroidery machine stitching a custom garment" },
+  {
+    src: "/hero/hero-model-braids-african-american-v3.png",
+    alt: "African American model wearing a custom printed Shear Threads sweatshirt",
+  },
+  { src: "/hero/hero-machine-purple-stitch-v1.png", alt: "Embroidery machine stitching purple thread into cream fabric" },
   { src: "/variation/lanyard-lifestyle.png", alt: "Purple woven lanyard worn outdoors" },
   { src: "/hero/instagram-chapter-order.jpg", alt: "Finished custom chapter apparel" },
   { src: "/hero/instagram-apparel.jpg", alt: "Custom embroidered sweatshirt detail" },
